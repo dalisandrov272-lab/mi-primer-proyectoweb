@@ -1,0 +1,342 @@
+/* FUENTES Y VARIABLES GLOBALES */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap');
+
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 1 rem = 16px. ESTO NO SE CAMBIA */ 
+/*  font-family: "Satisfy", cursive; */ 
+
+
+/* ESTILOS BASE Y CUERPO (BODY) */
+
+body {
+        font-family: "Montserrat", sans-serif;
+        line-height: 1.6;
+        background-color: #4096ba;
+        color: #f8fafc;
+        /* Layout Mobile-First con CSS Grid */
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "main"
+            "footer";
+            gap: 1.5rem;
+     }
+
+/* ENCABEZADO Y NAVEGACIÓN (HEADER, NAV Y FOOTER) */  /* ACA SE APLICO layout flexible */ 
+
+header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #306f8a;
+        padding: 1rem 2rem;
+        grid-area: header; /* ACA SE APLICO grid-area para trabajar con el modulo 4 */ 
+       }
+
+/* SE AJUSTO LA IMG DEL LOGO */
+.logo-img {
+    width: 80px;    
+    height: auto;
+}
+
+/* Lista de enlaces en fila horizontal */
+.nav-ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-ul li a {
+                color: #faee00;
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: 300;
+             }
+
+.nav-ul li {
+            list-style: none;
+           }
+
+           /* ACA SE APLICO flexible al footer */
+footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 1.5rem;
+            background-color: #306f8a;
+            grid-area: footer; /* ACA SE APLICO grid-area para trabajar con el modulo 4 */ 
+}           
+
+.pie-de-pagina {
+                color: #faee00;
+                font-size: 1rem;
+                font-weight: 300;
+               }
+
+/* ACA SE APLICO paddin PARA LOS ESPACIOS */
+main {
+    padding: 2rem 1.5rem;
+    grid-area: main;
+}
+
+/* CONTENIDO PRINCIPAL Y TIPOGRAFÍA */
+
+section {
+          background-color: #34425533;
+          padding: 1.25rem;
+          margin-bottom: 2rem;
+        }
+
+ /* Espaciado interno uniforme en los 4 lados para que tenga mas aire */        
+article {
+    padding: 1.2rem;
+}
+
+h1 {
+    color: #0c0068;
+    font-size: 2.7rem;
+    font-weight: 700;
+    text-align: center;
+   }
+
+h2 {
+    color: #1e293b;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+   }
+
+
+h3 {
+    color: #1e293b;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+   }
+
+
+p {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff1e0;
+  }
+
+  /* esta imagen es del index, con su tamaño respectivo */
+.img-index {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 0.5rem auto; 
+    border-radius: 8px;
+}
+
+/* ESTO ES EN EL FIGURE DEL INDEX: Centra el contenedor y el texto de la bienvenida */
+.banner-principal {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+/*ESTO ES EN EL ARCHIVO INICIO Y SOBRE NOSOTROS*/
+/* Lista de servicios apilada en mobile */
+.servicios-lista {
+    display: flex;
+    flex-direction: column; /* Mobile: uno debajo del otro */
+    gap: 1.5rem;
+}
+
+/* Grilla de galería en 1 sola columna en mobile */
+/* Agregalo en la parte de estilos base */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* COMPONENTE: Grilla de Horarios con grid-template-areas */
+.horarios-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "semana"
+  "sabado"
+  "domingo";
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+/* Asignación de áreas a cada tarjeta */
+.horario-semana { grid-area: semana; }
+.horrio-sabado { grid-area: sabado; }
+.horario-domingo { grid-area: domingo; }
+
+.horario-card {
+  background-color: #306f8a;
+  border-radius: 8px;
+  padding: 1.2rem;
+}
+
+/* BOOTSTRAP EN NAVBAR USANDO :hover :focus y :active. "INTERACTIVIDAD VISUAL" */
+
+/* Transición base para que los cambios sean suaves */
+.nav-link,
+.navbar-brand,
+.navbar-toggler {
+  transition: all 0.25s ease-in-out;
+}
+
+/* HOVER: al apoyar el mouse */
+.nav-link:hover {
+  color: #2563eb;               /* Cambia al color */
+  transform: translateY(-2px);   /* Leve elevación visual */
+}
+
+.navbar-brand:hover {
+  opacity: 0.85;
+  transform: scale(1.03);        /* Pequeño zoom al logo */
+}
+
+/* FOCUS: navegación accesible con teclado (Tab) */
+.nav-link:focus,
+.navbar-toggler:focus {
+  outline: 2px solid #38bdf8;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ACTIVE: en el momento exacto del clic */
+.nav-link:active {
+  transform: translateY(0);      /* Vuelve a su lugar al hacer clic */
+  color: #1d4ed8;
+}
+
+.navbar-brand:active {
+  transform: scale(0.98);
+}
+
+
+/* BOOTSTRAP TARJETA/sobre-nosotros.html */ 
+.tarj-tam {
+  width: 18rem;
+  background-color: #1e293b;
+}
+
+.h-tarjcor {
+  color: #4096ba;
+}
+
+/* SE AGREGA GRID A LA TARJETA DE BOOTSTRAP */
+.tarjeta-boots {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* 1. Hacemos que el cuerpo de la tarjeta sea un contenedor flex vertical */
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+/* 2. Empujamos el botón al fondo del contenedor porque no quedan alineados porque un texto es mayor a otro*/ 
+.card-body .btn-tarjeta {
+  margin-top: auto;
+}
+
+/* Botón personalizado de la tarjeta */
+.btn-tarjeta {
+    background-color: #4096ba;
+    color: #ffffff;
+    border: 1px solid #4096ba;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  /* Efecto al pasar el mouse (pseudoclase :hover) */
+.btn-tarjeta:hover {
+    background-color: transparent;
+    color: #4096ba;
+    border-color: #4096ba;
+    transform: translateY(-2px);
+  }
+
+ 
+  /* CARRUSEL BOOTSTRAP */
+      /* se realizo de esta manera ya que las imagenes se recortaban si el carrusel se se estira en pantallas grandes */
+.carrusel-contenedor {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #0f172a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carrusel-img {
+  width: 100%;
+  height: 480px;
+  object-fit: contain; /* Muestra la foto entera sin cortar nada */
+}
+
+/* Sombreado sutil para leer bien los textos del carrusel */
+.carousel-caption {
+  background-color: rgba(30, 41, 59, 0.75);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+/* ESCRITORIO (MEDIA QUERY - DESKTOPS / PANTALLAS GRANDES) */
+@media (min-width: 1024px) {
+    body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+    gap: 2.5rem;
+  }
+
+    /* Los servicios pasan a fila horizontal */
+  .servicios-lista {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1.5rem;
+  }
+
+  /* Distribución de las áreas del componente en escritorio */
+  .horarios-grid {
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas: 
+    "semana sabado"
+    "semana domingo";
+    gap: 1.5rem;
+  }
+  
+  /* TARJETA DE BOOTSTRAP EN PANTALLAS GRANDES */
+  .tarjeta-boots {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  }
+
+  /* CELULARES / MÓVILES (PANTALLAS CHICAS) */
+@media (max-width: 576px) {
+    /* Acá sí: altura adaptada a celular */
+  .carrusel-img {
+    height: 240px;
+  }
+  .carousel-caption h5 {
+    font-size: 1rem;
+  }
+  .carousel-caption p {
+    font-size: 0.85rem;
+  }
+}

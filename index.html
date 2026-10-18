@@ -1,0 +1,148 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <!-- css -->
+  <link rel="stylesheet" href="./styles/style.css">
+  <title>Asistencia y Ayuda a tu Felino</title>
+</head>
+<body>
+  <!-- Encabezado con logo/nombre y navegación eso va siempre en header -->
+<header>
+      
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img class="logo-img" src="./imagenes/logo-gats.webp" width="1509" height="1683" alt="un logo representativo">
+          </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                  <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./pages/sobre-nosotros.html">Sobre nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./pages/servicios.html">Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./pages/galeria.html">Galería</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+    </nav> 
+      
+</header>
+  
+<!-- Contenido principal -->
+
+<main>
+    <h1>Bienvenido a la Comunidad Felina</h1>
+    <p>Lugar donde aprenderás el cuidado de los gatos y mucho más.</p>
+    
+    <!-- Imagen principal de bienvenida -->    <!-- se agrego width y height a las img-->
+    <figure class="banner-principal">
+      <img class="img-index" src="./imagenes/bienvenido.webp" width="2752" height="1536" alt="Bienvenidos a la comunidad felina">
+      <figcaption>Cuidado, amor y dedicación para tu mascota</figcaption>
+    </figure>
+    
+    <!-- Sección Información breve / Nuestro objetivo -->
+    <section>
+      <h2>Nuestro objetivo</h2>
+      <p>Brindar ayuda y asesoramiento virtual sobre el cuidado integral de los felinos.</p>
+    </section>
+   
+    <!-- Sección Servicios destacados -->  <!--lo que se realizo aca es que agrego "ARTICLE" para agrupar contenidos independiente -->
+  <section>
+      <h2>Nuestros Servicios</h2>
+      <p>Te ayudamos a mantener el bienestar y una atención continua para tu mascota:</p>
+    
+      <!--SE AGREGO UN DIV PARA AGRUPAR A LOS ARTICLE PARA QUE NO AFECTE AL h2 y p-->  
+    <div class="servicios-lista">
+      <article>
+        <h3>Alimentación consciente</h3>
+        <p>Consejos y planes nutricionales adaptados a cada etapa de la vida de tu gato.</p>
+      </article>
+      
+      <article>
+        <h3>Controles veterinarios y prevención</h3>
+        <p>Guías sobre calendarios de vacunación, desparasitación y chequeos periódicos.</p>
+      </article>
+    
+      <article>
+        <h3>Higiene y estética felina</h3>
+        <p>Recomendaciones para el cepillado, cuidado del pelaje y corte de uñas sin estrés.</p>
+      </article>
+      
+      <article>
+        <h3>Vínculo e interacción en el hogar</h3>
+        <p>Tips de enriquecimiento ambiental y juegos para fortalecer la convivencia.</p>
+      </article>
+   </div>
+  </section>
+
+  <h2>Directores de Nuestra Comunidad</h2>
+    
+      <!--TARJETA DE BOOTSTRAP-->
+    <section class="tarjeta-boots">
+      <div class="card tarj-tam">
+          <img src="./imagenes/Fundador.webp" class="card-img-top" alt="imagen del creador de esta comunidad">
+            <div class="card-body">
+                <h5 class="card-title h-tarjcor">Fundador de nuestra comunidad felina</h5>
+                <p class="card-text">Alejandro Vargas, Bajo su liderazgo, la comunidad se estableció formalmente en el año 2020, con el propósito de unir a los amantes de los gatos y promover el bienestar animal.</p>
+                <a href="https://www.instagram.com" class="btn btn-tarjeta" target="_blank">Sigueme en Instagram</a>
+            </div>
+        </div>
+
+        <div class="card tarj-tam">
+          <img src="./imagenes/directora-marketing.webp" class="card-img-top" alt="imagen de la directora de marketing">
+            <div class="card-body">
+                <h5 class="card-title h-tarjcor">Directora de Marketing</h5>
+                <p class="card-text">Ramona Roballo, quien ha liderado nuestra dirección de Marketing desde la creación de la comunidad, impulsando nuestro crecimiento con visión y compromiso.</p>
+                <a href="https://www.instagram.com" class="btn btn-tarjeta" target="_blank">Sigueme en Instagram</a>
+            </div>
+        </div>
+
+        <div class="card tarj-tam">
+          <img src="./imagenes/director-digital.webp" class="card-img-top" alt="imagen del director digital">
+            <div class="card-body">
+                <h5 class="card-title h-tarjcor">Director Digital</h5>
+                <p class="card-text">Dalisandro Roballo. Ha liderado nuestra estrategia y presencia en línea desde la fundación de la comunidad, asegurando que nuestra voz llegue a todos los rincones de la red.</p>
+                <a href="https://www.instagram.com" class="btn btn-tarjeta" target="_blank">Sigueme en Instagram</a>
+            </div>
+        </div>
+
+    </section>
+
+</main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p class="pie-de-pagina">&copy; 2026 Comunidad Felina. Todos los derechos reservados.</p>
+    <nav aria-label="Redes sociales">
+      <ul class="nav-ul">
+        <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+        <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+
+  <!--BOOTSTRAP-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
+
