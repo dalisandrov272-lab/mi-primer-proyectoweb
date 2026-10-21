@@ -222,6 +222,7 @@ p {
   transform: scale(0.98);
 }
 
+/*estilos enlace navbar */
 .navbar-nav .nav-link {
     color: #faee00;
 }
