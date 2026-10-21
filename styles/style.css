@@ -222,6 +222,10 @@ p {
   transform: scale(0.98);
 }
 
+.navbar-nav .nav-link {
+    color: #faee00;
+}
+
 
 /* BOOTSTRAP TARJETA/sobre-nosotros.html */ 
 .tarj-tam {
