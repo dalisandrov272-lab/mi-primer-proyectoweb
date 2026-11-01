@@ -1,0 +1,54 @@
+// utilities/_mixins.scss
+@use "variables";
+
+// Mixins (bloques que cambian según los parámetros)
+
+// Barra flex con fondo azul: la usan el header y el footer
+@mixin flex-header-footer($padding) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: variables.$color-azul-header-footer;
+  padding: $padding;
+}
+
+// Grilla con columnas y espacio configurables
+@mixin grid-columnas($columnas, $espacio) {
+  display: grid;
+  grid-template-columns: $columnas;
+  gap: $espacio;
+}
+
+// Caja con fondo, padding y bordes redondeados
+@mixin caja-fondo($fondo, $padding, $radio: variables.$radio-8px) {
+  background-color: $fondo;
+  border-radius: $radio;
+  padding: $padding;
+}
+
+// Botón relleno que se vacía en hover
+@mixin boton-hover-vacio($color, $texto: variables.$color-blanco) {
+  background-color: $color;
+  color: $texto;
+  border: variables.$borde-1px solid $color;
+  font-weight: variables.$peso-600;
+
+  &:hover {
+    background-color: transparent;
+    color: $color;
+    border-color: $color;
+  }
+}
+
+// Placeholders (bloques fijos, se usan con @extend) 
+
+%columna-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+%texto-amarillo {
+  color: variables.$color-amarillo;
+  font-size: variables.$tam-fuente-base;
+  font-weight: variables.$peso-300;
+}

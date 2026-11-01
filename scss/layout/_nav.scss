@@ -1,0 +1,43 @@
+// layout/_nav.scss
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+// Lista de enlaces en fila horizontal (redes sociales del footer)
+.nav-ul {
+  display: flex;
+  gap: variables.$espacio-24px;
+
+  li {
+    list-style: none;
+
+    a {
+      @extend %texto-amarillo;
+      text-decoration: none;
+    }
+  }
+}
+
+// Navbar de Bootstrap con clases propias: interactividad visual (:hover, :focus y :active)
+.nav-enlace {
+  color: variables.$color-amarillo;
+
+  &:hover {
+    color: variables.$color-nav-hover;
+  }
+
+  &:focus {
+    outline: variables.$outline-2px solid variables.$color-nav-focus;
+    outline-offset: variables.$outline-offset-3px;
+    border-radius: variables.$radio-4px;
+  }
+
+  &:active {
+    color: variables.$color-nav-active;
+  }
+}
+
+.nav-logo-link {
+  &:hover {
+    opacity: variables.$opacidad-logo-hover;
+  }
+}

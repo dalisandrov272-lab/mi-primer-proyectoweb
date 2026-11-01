@@ -1,0 +1,8 @@
+// components/_buttons.scss
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+// Botón personalizado de la tarjeta
+.btn-tarjeta {
+  @include mixins.boton-hover-vacio(variables.$color-celeste);
+}

@@ -1,0 +1,14 @@
+// layout/_header.scss
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+// Layout flexible del encabezado
+header {
+  @include mixins.flex-header-footer(variables.$espacio-16px variables.$espacio-32px);
+}
+
+// Ajuste de la imagen del logo
+.logo-img {
+  width: variables.$ancho-logo;
+  height: auto;
+}

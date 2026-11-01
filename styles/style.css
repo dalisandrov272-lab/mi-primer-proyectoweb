@@ -1,171 +1,180 @@
-/* FUENTES Y VARIABLES GLOBALES */ 
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap');
-
-
-* { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-/* 1 rem = 16px. ESTO NO SE CAMBIA */ 
-/*  font-family: "Satisfy", cursive; */ 
-
-
-/* ESTILOS BASE Y CUERPO (BODY) */
-
-body {
-        font-family: "Montserrat", sans-serif;
-        line-height: 1.6;
-        background-color: #4096ba;
-        color: #f8fafc;
-     }
-
-/* ENCABEZADO Y NAVEGACIÓN (HEADER, NAV Y FOOTER) */  /* ACA SE APLICO layout flexible */ 
-
-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #306f8a;
-        padding: 16px 32px;
-       }
-
-/* SE AJUSTO LA IMG DEL LOGO */
-.logo-img {
-    width: 80px;    
-    height: auto;
-          }
-
-/* Lista de enlaces en fila horizontal */
-.nav-ul {
-    display: flex;
-    gap: 24px;
-        }
-
-.nav-ul li a {
-                color: #faee00;
-                text-decoration: none;
-                font-size: 1rem;
-                font-weight: 300;
-             }
-
-.nav-ul li {
-            list-style: none;
-           }
-
-           /* ACA SE APLICO flexible al footer */
-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 32px 24px;
-            background-color: #306f8a; 
-        }           
-
-.pie-de-pagina {
-                color: #faee00;
-                font-size: 1rem;
-                font-weight: 300;
-               }
-
-/* ACA SE APLICO paddin PARA LOS ESPACIOS */
-main {
-    padding: 32px 24px;
-     }
-
-/* CONTENIDO PRINCIPAL Y TIPOGRAFÍA */
-
-section {
-          background-color: #34425533;
-          padding: 20px;
-          margin-bottom: 32px;
-        }
-
- /* Espaciado interno uniforme en los 4 lados para que tenga mas aire */        
-article {
-    padding: 19px;
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap");
+h1 {
+  color: #0c0068;
+  font-size: 2.7rem;
+  font-weight: 700;
+  text-align: center;
 }
 
-h1 {
-    color: #0c0068;
-    font-size: 2.7rem;
-    font-weight: 700;
-    text-align: center;
-   }
+h2,
+h3 {
+  color: #1e293b;
+  font-weight: 600;
+}
 
 h2 {
-    color: #1e293b;
-    font-size: 1.7rem;
-    font-weight: 600;
-    margin-bottom: 16px;
-   }
-
-
-h3 {
-    color: #1e293b;
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-   }
-
-
-p {
-    font-size: 1rem;
-    font-weight: 500;
-    color: #fff1e0;
-  }
-
-  /* esta imagen es del index, con su tamaño respectivo */
-.img-index {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto 8px auto; 
-    border-radius: 8px;
+  font-size: 1.7rem;
+  margin-bottom: 16px;
 }
 
-/* ESTO ES EN EL FIGURE DEL INDEX: Centra el contenedor y el texto de la bienvenida */
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff1e0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  background-color: #4096ba;
+  color: #f8fafc;
+}
+
+main {
+  padding: 32px 24px;
+}
+
+section {
+  background-color: rgba(52, 66, 85, 0.2);
+  padding: 20px;
+  margin-bottom: 32px;
+}
+
+article {
+  padding: 19px;
+}
+
+.tarj-cuerpo, .servicios-lista {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-ul li a, .pie-de-pagina {
+  color: #faee00;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #306f8a;
+  padding: 16px 32px;
+}
+
+.logo-img {
+  width: 80px;
+  height: auto;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #306f8a;
+  padding: 32px 24px;
+}
+
+.nav-ul {
+  display: flex;
+  gap: 24px;
+}
+.nav-ul li {
+  list-style: none;
+}
+.nav-ul li a {
+  text-decoration: none;
+}
+
+.nav-enlace {
+  color: #faee00;
+}
+.nav-enlace:hover {
+  color: #2563eb;
+}
+.nav-enlace:focus {
+  outline: 2px solid #38bdf8;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.nav-enlace:active {
+  color: #1d4ed8;
+}
+
+.nav-logo-link:hover {
+  opacity: 0.85;
+}
+
+.img-index {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 8px auto;
+  border-radius: 8px;
+}
+
 .banner-principal {
   text-align: center;
   margin-bottom: 32px;
   width: 100%;
 }
 
-/*ESTO ES EN EL ARCHIVO INICIO Y SOBRE NOSOTROS*/
-/* Lista de servicios apilada en mobile */
 .servicios-lista {
-    display: flex;
-    flex-direction: column; /* Mobile: uno debajo del otro */
-    gap: 24px;
+  gap: 24px;
+}
+@media (min-width: 1024px) {
+  .servicios-lista {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
 }
 
-/* Grilla de galería en 1 sola columna en mobile */
-/* Agregalo en la parte de estilos base */
 .galeria-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
 }
 
-/* COMPONENTE: Grilla de Horarios con grid-template-areas */
 .horarios-grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-areas: 
-  "semana"
-  "sabado"
-  "domingo";
   gap: 20px;
+  grid-template-areas: "semana" "sabado" "domingo";
   margin-top: 24px;
 }
+@media (min-width: 1024px) {
+  .horarios-grid {
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas: "semana sabado" "semana domingo";
+    gap: 24px;
+  }
+}
 
-/* Asignación de áreas a cada tarjeta */
-.horario-semana { grid-area: semana; }
-.horrio-sabado { grid-area: sabado; }
-.horario-domingo { grid-area: domingo; }
+.horario-semana {
+  grid-area: semana;
+}
+
+.horrio-sabado {
+  grid-area: sabado;
+}
+
+.horario-domingo {
+  grid-area: domingo;
+}
 
 .horario-card {
   background-color: #306f8a;
@@ -173,33 +182,6 @@ p {
   padding: 19px;
 }
 
-/* BOOTSTRAP EN NAVBAR USANDO :hover :focus y :active. "INTERACTIVIDAD VISUAL" */
-
-/* CORREGIDO (solo cambio de color/opacidad estándar): */
-/* NAVEGACIÓN CON CLASES PROPIAS */
-.nav-enlace {
-  color: #faee00;
-}
-
-.nav-enlace:hover {
-  color: #2563eb;
-}
-
-.nav-logo-link:hover {
-  opacity: 0.85;
-}
-
-.nav-enlace:focus {
-  outline: 2px solid #38bdf8;
-  outline-offset: 3px;
-  border-radius: 4px;
-}
-
-.nav-enlace:active {
-  color: #1d4ed8;
-}
-
-/* BOOTSTRAP TARJETA/sobre-nosotros.html */ 
 .tarj-tam {
   width: 288px;
   background-color: #1e293b;
@@ -209,40 +191,34 @@ p {
   color: #4096ba;
 }
 
-/* SE AGREGA GRID A LA TARJETA DE BOOTSTRAP */
 .tarjeta-boots {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
 }
-
-/* ESTRUCTURA INTERNA DE LA TARJETA (CLASE PROPIA) */
-.tarj-cuerpo {
-  display: flex;
-  flex-direction: column;
+@media (min-width: 1024px) {
+  .tarjeta-boots {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
 }
 
 .tarj-cuerpo .btn-tarjeta {
   margin-top: auto;
 }
 
-/* Botón personalizado de la tarjeta CORREGIDO */
 .btn-tarjeta {
   background-color: #4096ba;
   color: #ffffff;
   border: 1px solid #4096ba;
   font-weight: 600;
 }
-
 .btn-tarjeta:hover {
   background-color: transparent;
   color: #4096ba;
   border-color: #4096ba;
 }
 
- 
-  /* CARRUSEL BOOTSTRAP */
-      /* se realizo de esta manera ya que las imagenes se recortaban si el carrusel se se estira en pantallas grandes */
 .carrusel-contenedor {
   max-width: 900px;
   margin-left: auto;
@@ -255,53 +231,29 @@ p {
 .carrusel-img {
   width: 100%;
   height: 480px;
-  object-fit: contain; /* Muestra la foto entera sin cortar nada */
+  object-fit: contain;
 }
-
-/* Sombreado para los textos del carrusel con clase propia */
-.carrusel-texto {
-  background-color: rgba(140, 163, 200, 0.75);
-  border-radius: 8px;
-  padding: 16px;
-}
-
-/* ESCRITORIO (MEDIA QUERY - DESKTOPS / PANTALLAS GRANDES) */
-@media (min-width: 1024px) {
-
-    /* Los servicios pasan a fila horizontal */
-  .servicios-lista {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 24px;
-  }
-
-  /* Distribución de las áreas del componente en escritorio */
-  .horarios-grid {
-    grid-template-columns: 1.5fr 1fr;
-    grid-template-areas: 
-    "semana sabado"
-    "semana domingo";
-    gap: 24px;
-  }
-  
-  /* TARJETA DE BOOTSTRAP EN PANTALLAS GRANDES */
-  .tarjeta-boots {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-  }
-  }
-
-  /* CELULARES / MÓVILES (PANTALLAS CHICAS) */
 @media (max-width: 576px) {
-    /* Acá sí: altura adaptada a celular */
   .carrusel-img {
     height: 240px;
   }
-  .carousel-caption h5 {
-    font-size: 1rem;
-  }
+}
+
+.carrusel-texto {
+  background-color: rgba(140, 163, 200, 0.7490196078);
+  border-radius: 8px;
+  padding: 16px;
+}
+@media (max-width: 576px) {
   .carrusel-texto p {
     font-size: 0.85rem;
   }
 }
+
+@media (max-width: 576px) {
+  .carousel-caption h5 {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,43 @@
+// components/_carrusel.scss (carrusel de Bootstrap)
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+// Las imágenes se recortaban si el carrusel se estiraba en pantallas grandes
+.carrusel-contenedor {
+  max-width: variables.$ancho-max-carrusel;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: variables.$color-carrusel-fondo;
+  border-radius: variables.$radio-8px;
+  overflow: hidden;
+}
+
+.carrusel-img {
+  width: 100%;
+  height: variables.$alto-carrusel;
+  object-fit: contain; // Muestra la foto entera sin cortar nada
+
+  // Altura adaptada a celular
+  @media (max-width: variables.$quiebre-movil) {
+    height: variables.$alto-carrusel-movil;
+  }
+}
+
+// Sombreado para los textos del carrusel con clase propia
+.carrusel-texto {
+  @include mixins.caja-fondo(variables.$color-carrusel-texto, variables.$espacio-16px);
+
+  @media (max-width: variables.$quiebre-movil) {
+    p {
+      font-size: variables.$tam-texto-carrusel-movil;
+    }
+  }
+}
+
+.carousel-caption {
+  @media (max-width: variables.$quiebre-movil) {
+    h5 {
+      font-size: variables.$tam-fuente-base;
+    }
+  }
+}

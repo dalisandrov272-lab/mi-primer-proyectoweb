@@ -1,0 +1,30 @@
+// base/_base.scss (estilos globales a etiquetas)
+@use "../utilities/variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: variables.$fuente-body;
+  line-height: variables.$interlineado-body;
+  background-color: variables.$color-celeste;
+  color: variables.$color-texto-body;
+}
+
+main {
+  padding: variables.$espacio-32px variables.$espacio-24px;
+}
+
+section {
+  background-color: variables.$color-fondo-section;
+  padding: variables.$espacio-20px;
+  margin-bottom: variables.$espacio-32px;
+}
+
+// Espaciado interno uniforme en los 4 lados para que tenga más aire
+article {
+  padding: variables.$espacio-19px;
+}

@@ -1,0 +1,61 @@
+// utilities/_variables.scss
+// Cada nombre indica a qué parte del CSS original corresponde ese valor
+
+//  Colores 
+$color-celeste: #4096ba;              // fondo del body, .btn-tarjeta y .h-tarjcor
+$color-azul-header-footer: #306f8a;   // header, footer y .horario-card
+$color-amarillo: #faee00;             // .nav-enlace, .nav-ul li a y .pie-de-pagina
+$color-texto-body: #f8fafc;           // color del body
+$color-texto-parrafo: #fff1e0;        // p
+$color-titulo-h1: #0c0068;            // h1
+$color-azul-oscuro: #1e293b;          // h2, h3 y fondo de .tarj-tam
+$color-fondo-section: #34425533;      // fondo de section
+$color-blanco: #ffffff;               // texto de .btn-tarjeta
+$color-nav-hover: #2563eb;            // .nav-enlace:hover
+$color-nav-active: #1d4ed8;           // .nav-enlace:active
+$color-nav-focus: #38bdf8;            // outline de .nav-enlace:focus
+$color-carrusel-fondo: #7e9de4;       // .carrusel-contenedor
+$color-carrusel-texto: #8ca3c8bf;     // .carrusel-texto
+
+// Tipografía 
+$fuente-body: "Montserrat", sans-serif;
+$interlineado-body: 1.6;
+
+$tam-fuente-base: 1rem;               // p, enlaces del footer y .pie-de-pagina
+$tam-texto-carrusel-movil: 0.85rem;   // .carrusel-texto p en celular
+$tam-h1: 2.7rem;
+$tam-h2: 1.7rem;
+$tam-h3: 1.25rem;
+
+$peso-300: 300;
+$peso-500: 500;
+$peso-600: 600;
+$peso-700: 700;
+
+// Espaciados (el número es el valor en px)
+$espacio-8px: 8px;
+$espacio-16px: 16px;
+$espacio-19px: 19px;                  // padding de article y .horario-card
+$espacio-20px: 20px;                  // padding de section y gap de .horarios-grid
+$espacio-24px: 24px;
+$espacio-32px: 32px;
+
+//  Bordes y detalles 
+$radio-8px: 8px;                      // border-radius de imágenes, tarjetas y carrusel
+$radio-4px: 4px;                      // border-radius de .nav-enlace:focus
+$borde-1px: 1px;                      // borde de .btn-tarjeta
+$outline-2px: 2px;                    // outline de .nav-enlace:focus
+$outline-offset-3px: 3px;             // outline-offset de .nav-enlace:focus
+$opacidad-logo-hover: 0.85;           // .nav-logo-link:hover
+
+// Tamaños
+$ancho-logo: 80px;                    // .logo-img
+$ancho-tarjeta: 288px;                // .tarj-tam
+$ancho-max-carrusel: 900px;           // .carrusel-contenedor
+$alto-carrusel: 480px;                // .carrusel-img
+$alto-carrusel-movil: 240px;          // .carrusel-img en celular
+
+// Puntos de quiebre (media queries) 
+$quiebre-escritorio: 1024px;          // @media (min-width: 1024px)
+$quiebre-movil: 576px;                // @media (max-width: 576px)
+

@@ -1,0 +1,77 @@
+// components/_secciones.scss
+// Bloques de contenido de las páginas: banner del index, servicios, galería y horarios.
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+// Banner del index 
+
+// Imagen del index, con su tamaño respectivo
+.img-index {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto variables.$espacio-8px auto;
+  border-radius: variables.$radio-8px;
+}
+
+// Figure del index: centra el contenedor y el texto de la bienvenida
+.banner-principal {
+  text-align: center;
+  margin-bottom: variables.$espacio-32px;
+  width: 100%;
+}
+
+//  Servicios 
+
+// Lista de servicios: apilada en mobile, en fila en escritorio
+.servicios-lista {
+  @extend %columna-flex;
+  gap: variables.$espacio-24px;
+
+  @media (min-width: variables.$quiebre-escritorio) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+
+//  Galería 
+
+// Grilla de galería en 1 sola columna en mobile
+.galeria-grid {
+  @include mixins.grid-columnas(1fr, variables.$espacio-24px);
+}
+
+//  Horarios
+
+// Grilla de horarios con grid-template-areas
+.horarios-grid {
+  @include mixins.grid-columnas(1fr, variables.$espacio-20px);
+  grid-template-areas: "semana" "sabado" "domingo";
+  margin-top: variables.$espacio-24px;
+
+  // Distribución de las áreas en escritorio
+  @media (min-width: variables.$quiebre-escritorio) {
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-areas: "semana sabado" "semana domingo";
+    gap: variables.$espacio-24px;
+  }
+}
+
+// Asignación de áreas a cada tarjeta
+.horario-semana {
+  grid-area: semana;
+}
+
+.horrio-sabado {
+  grid-area: sabado;
+}
+
+.horario-domingo {
+  grid-area: domingo;
+}
+
+.horario-card {
+  @include mixins.caja-fondo(variables.$color-azul-header-footer, variables.$espacio-19px);
+}

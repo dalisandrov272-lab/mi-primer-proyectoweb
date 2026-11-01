@@ -1,0 +1,12 @@
+// layout/_footer.scss
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+// Layout flexible del pie de página
+footer {
+  @include mixins.flex-header-footer(variables.$espacio-32px variables.$espacio-24px);
+}
+
+.pie-de-pagina {
+  @extend %texto-amarillo;
+}

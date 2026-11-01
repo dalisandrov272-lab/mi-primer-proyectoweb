@@ -1,0 +1,16 @@
+// main.scss: único punto de entrada
+
+// Base
+@use "base/tipografia";
+@use "base/base";
+
+// Layout
+@use "layout/header";
+@use "layout/footer";
+@use "layout/nav";
+
+// Components
+@use "components/secciones";
+@use "components/cards";
+@use "components/buttons";
+@use "components/carrusel";

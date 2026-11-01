@@ -1,0 +1,35 @@
+// base/_tipografia.scss
+@use "../utilities/variables";
+
+// Fuentes (1 rem = 16px. ESTO NO SE CAMBIA)
+// font-family: "Satisfy", cursive;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap');
+
+h1 {
+  color: variables.$color-titulo-h1;
+  font-size: variables.$tam-h1;
+  font-weight: variables.$peso-700;
+  text-align: center;
+}
+
+h2,
+h3 {
+  color: variables.$color-azul-oscuro;
+  font-weight: variables.$peso-600;
+}
+
+h2 {
+  font-size: variables.$tam-h2;
+  margin-bottom: variables.$espacio-16px;
+}
+
+h3 {
+  font-size: variables.$tam-h3;
+  margin-bottom: variables.$espacio-8px;
+}
+
+p {
+  font-size: variables.$tam-fuente-base;
+  font-weight: variables.$peso-500;
+  color: variables.$color-texto-parrafo;
+}

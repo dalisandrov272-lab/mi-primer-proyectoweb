@@ -1,0 +1,32 @@
+// components/_cards.scss (tarjetas de Bootstrap en sobre-nosotros / index)
+@use "../utilities/variables";
+@use "../utilities/mixins";
+
+.tarj-tam {
+  width: variables.$ancho-tarjeta;
+  background-color: variables.$color-azul-oscuro;
+}
+
+.h-tarjcor {
+  color: variables.$color-celeste;
+}
+
+// Grid para las tarjetas de Bootstrap
+.tarjeta-boots {
+  @include mixins.grid-columnas(1fr, variables.$espacio-24px);
+
+  // Tarjetas en pantallas grandes
+  @media (min-width: variables.$quiebre-escritorio) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: variables.$espacio-32px;
+  }
+}
+
+// Estructura interna de la tarjeta
+.tarj-cuerpo {
+  @extend %columna-flex;
+
+  .btn-tarjeta {
+    margin-top: auto;
+  }
+}
