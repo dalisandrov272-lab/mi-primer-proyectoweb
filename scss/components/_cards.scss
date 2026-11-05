@@ -15,6 +15,11 @@
 .tarjeta-boots {
   @include mixins.grid-columnas(1fr, variables.$espacio-24px);
 
+// Tarjetas en tablet: 2 columnas
+  @media (min-width: variables.$quiebre-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
   // Tarjetas en pantallas grandes
   @media (min-width: variables.$quiebre-escritorio) {
     grid-template-columns: repeat(3, 1fr);

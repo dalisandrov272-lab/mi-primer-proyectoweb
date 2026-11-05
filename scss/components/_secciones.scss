@@ -51,6 +51,12 @@
   grid-template-areas: "semana" "sabado" "domingo";
   margin-top: variables.$espacio-24px;
 
+// Tablet: semana arriba y sábado / domingo en dos columnas
+  @media (min-width: variables.$quiebre-tablet) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "semana semana" "sabado domingo";
+  }
+
   // Distribución de las áreas en escritorio
   @media (min-width: variables.$quiebre-escritorio) {
     grid-template-columns: 1.5fr 1fr;
@@ -74,4 +80,6 @@
 
 .horario-card {
   @include mixins.caja-fondo(variables.$color-azul-header-footer, variables.$espacio-19px);
+// Animación nativa: la tarjeta se eleva suavemente en :hover
+  @include mixins.elevar-hover(variables.$elevacion-hover, variables.$escala-hover);
 }

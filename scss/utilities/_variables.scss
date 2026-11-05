@@ -55,7 +55,13 @@ $ancho-max-carrusel: 900px;           // .carrusel-contenedor
 $alto-carrusel: 480px;                // .carrusel-img
 $alto-carrusel-movil: 240px;          // .carrusel-img en celular
 
-// Puntos de quiebre (media queries) 
+// pre-entrega: animaciones y full-responsive
+$duracion-transicion: 0.3s;           // transition de .horario-card
+$elevacion-hover: -4px;               // translateY de .horario-card en :hover
+$escala-hover: 1.02;                  // scale de .horario-card en :hover
+
+// Puntos de quiebre (media queries)
+$quiebre-tablet: 768px; 
 $quiebre-escritorio: 1024px;          // @media (min-width: 1024px)
 $quiebre-movil: 576px;                // @media (max-width: 576px)
 

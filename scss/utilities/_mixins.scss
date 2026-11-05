@@ -40,6 +40,15 @@
   }
 }
 
+// Transición que eleva y agranda un elemento al pasar el cursor (transform + transition)
+@mixin elevar-hover($desplazamiento, $escala: 1) {
+  transition: transform variables.$duracion-transicion ease-out;
+
+  &:hover {
+    transform: translateY($desplazamiento) scale($escala);
+  }
+}
+
 // Placeholders (bloques fijos, se usan con @extend) 
 
 %columna-flex {

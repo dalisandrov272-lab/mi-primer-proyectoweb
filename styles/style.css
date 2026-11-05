@@ -85,6 +85,15 @@ footer {
   align-items: center;
   background-color: #306f8a;
   padding: 32px 24px;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    text-align: left;
+  }
 }
 
 .nav-ul {
@@ -156,6 +165,12 @@ footer {
   grid-template-areas: "semana" "sabado" "domingo";
   margin-top: 24px;
 }
+@media (min-width: 768px) {
+  .horarios-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "semana semana" "sabado domingo";
+  }
+}
 @media (min-width: 1024px) {
   .horarios-grid {
     grid-template-columns: 1.5fr 1fr;
@@ -180,6 +195,10 @@ footer {
   background-color: #306f8a;
   border-radius: 8px;
   padding: 19px;
+  transition: transform 0.3s ease-out;
+}
+.horario-card:hover {
+  transform: translateY(-4px) scale(1.02);
 }
 
 .tarj-tam {
@@ -195,6 +214,11 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
+}
+@media (min-width: 768px) {
+  .tarjeta-boots {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (min-width: 1024px) {
   .tarjeta-boots {

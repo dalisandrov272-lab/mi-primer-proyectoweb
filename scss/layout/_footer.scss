@@ -5,6 +5,17 @@
 // Layout flexible del pie de página
 footer {
   @include mixins.flex-header-footer(variables.$espacio-32px variables.$espacio-24px);
+
+  // Mobile: el copyright y las redes quedan uno debajo del otro
+  flex-direction: column;
+  gap: variables.$espacio-16px;
+  text-align: center;
+
+  // Tablet: vuelven a quedar en fila
+  @media (min-width: variables.$quiebre-tablet) {
+    flex-direction: row;
+    text-align: left;
+  }
 }
 
 .pie-de-pagina {
