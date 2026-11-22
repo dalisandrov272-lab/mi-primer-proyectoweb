@@ -27,11 +27,12 @@
 }
 
 // Botón relleno que se vacía en hover
-@mixin boton-hover-vacio($color, $texto: variables.$color-blanco) {
+@mixin boton-hover-vacio($color, $texto: variables.$color-blanco, $grosor-borde: variables.$borde-1px, $peso-letra: variables.$peso-600){
   background-color: $color;
   color: $texto;
-  border: variables.$borde-1px solid $color;
-  font-weight: variables.$peso-600;
+  border: $grosor-borde solid $color;
+  font-weight: $peso-letra;
+
 
   &:hover {
     background-color: transparent;
@@ -47,17 +48,4 @@
   &:hover {
     transform: translateY($desplazamiento) scale($escala);
   }
-}
-
-// Placeholders (bloques fijos, se usan con @extend) 
-
-%columna-flex {
-  display: flex;
-  flex-direction: column;
-}
-
-%texto-amarillo {
-  color: variables.$color-amarillo;
-  font-size: variables.$tam-fuente-base;
-  font-weight: variables.$peso-300;
 }

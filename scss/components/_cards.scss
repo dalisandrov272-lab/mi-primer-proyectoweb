@@ -1,6 +1,7 @@
 // components/_cards.scss (tarjetas de Bootstrap en sobre-nosotros / index)
 @use "../utilities/variables";
 @use "../utilities/mixins";
+@use "../utilities/placeholders";
 
 .tarj-tam {
   width: variables.$ancho-tarjeta;

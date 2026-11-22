@@ -1,0 +1,14 @@
+ @use "variables";
+
+ // Placeholders (bloques fijos, se usan con @extend) 
+
+%columna-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+%texto-amarillo {
+  color: variables.$color-amarillo;
+  font-size: variables.$tam-fuente-base;
+  font-weight: variables.$peso-300;
+}

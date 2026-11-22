@@ -1,6 +1,7 @@
 // layout/_nav.scss
 @use "../utilities/variables";
 @use "../utilities/mixins";
+@use "../utilities/placeholders";
 
 // Lista de enlaces en fila horizontal (redes sociales del footer)
 .nav-ul {
