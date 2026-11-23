@@ -4,11 +4,11 @@
 // Mixins (bloques que cambian según los parámetros)
 
 // Barra flex con fondo azul: la usan el header y el footer
-@mixin flex-header-footer($padding) {
+@mixin flex-header-footer($padding, $color-fondo: variables.$color-azul-header-footer) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: variables.$color-azul-header-footer;
+  background-color: $color-fondo;
   padding: $padding;
 }
 
