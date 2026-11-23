@@ -27,9 +27,9 @@
   }
 
   &:focus {
-    outline: variables.$outline-2px solid variables.$color-nav-focus;
+    outline:2px solid variables.$color-nav-focus;
     outline-offset: variables.$outline-offset-3px;
-    border-radius: variables.$radio-4px;
+    border-radius: 4px;
   }
 
   &:active {

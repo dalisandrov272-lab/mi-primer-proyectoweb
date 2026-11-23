@@ -8,7 +8,7 @@
 h1 {
   color: variables.$color-titulo-h1;
   font-size: variables.$tam-h1;
-  font-weight: variables.$peso-700;
+  font-weight:700;
   text-align: center;
 }
 
@@ -30,6 +30,6 @@ h3 {
 
 p {
   font-size: variables.$tam-fuente-base;
-  font-weight: variables.$peso-500;
+  font-weight:500;
   color: variables.$color-texto-parrafo;
 }

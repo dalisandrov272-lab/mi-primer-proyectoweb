@@ -19,7 +19,6 @@ $color-carrusel-texto: #8ca3c8bf;     // .carrusel-texto
 
 // Tipografía 
 $fuente-body: "Montserrat", sans-serif;
-$interlineado-body: 1.6;
 
 $tam-fuente-base: 1rem;               // p, enlaces del footer y .pie-de-pagina
 $tam-texto-carrusel-movil: 0.85rem;   // .carrusel-texto p en celular
@@ -28,9 +27,7 @@ $tam-h2: 1.7rem;
 $tam-h3: 1.25rem;
 
 $peso-300: 300;
-$peso-500: 500;
 $peso-600: 600;
-$peso-700: 700;
 
 // Espaciados (el número es el valor en px)
 $espacio-8px: 8px;
@@ -42,14 +39,11 @@ $espacio-32px: 32px;
 
 //  Bordes y detalles 
 $radio-8px: 8px;                      // border-radius de imágenes, tarjetas y carrusel
-$radio-4px: 4px;                      // border-radius de .nav-enlace:focus
 $borde-1px: 1px;                      // borde de .btn-tarjeta
-$outline-2px: 2px;                    // outline de .nav-enlace:focus
 $outline-offset-3px: 3px;             // outline-offset de .nav-enlace:focus
 $opacidad-logo-hover: 0.85;           // .nav-logo-link:hover
 
 // Tamaños
-$ancho-logo: 80px;                    // .logo-img
 $ancho-tarjeta: 288px;                // .tarj-tam
 $ancho-max-carrusel: 900px;           // .carrusel-contenedor
 $alto-carrusel: 480px;                // .carrusel-img
